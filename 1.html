@@ -101,6 +101,9 @@ function init() {
 
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
 var btn=document.getElementById("sort-btn");
+if(btn.attachEvent)
+btn.attachEvent("onclick",btnHandle);
+else
 btn.addEventListener("click",btnHandle);
 }
 
